@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "743810771963",
+    "project_id": "tales-space",
+    "storage_bucket": "tales-space.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743810771963:android:78c93c1bef9f3b4d1b395e",
+        "android_client_info": {
+          "package_name": "com.tales.tales_space"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743810771963-dvm5lloftk41508tvhdul6rvlidbq1ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy6ecl1LJ4dNb-hKptlUtJTH0NKWQVpoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743810771963-dvm5lloftk41508tvhdul6rvlidbq1ac.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "743810771963-19loq2et8bnga2bv5d03aatk79h0dnpi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tales.space.talesSpace"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
