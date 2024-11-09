@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -58,9 +60,10 @@ class AuthController extends StateNotifier<bool> {
       (value) {
         state = false;
         value.fold(
-          (l) => Grock.snackBar(
-            title: 'Error',
-            description: l.message,
+          (l) => ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(l.message),
+            ),
           ),
           (r) {
             context.go(GoRouterConfig.home);
@@ -69,6 +72,12 @@ class AuthController extends StateNotifier<bool> {
       },
     );
     state = false;
+  }
+
+  Future<bool> checkEmailVerified() async {
+    await FirebaseAuth.instance.currentUser?.reload();
+    log('${FirebaseAuth.instance.currentUser!.emailVerified}');
+    return FirebaseAuth.instance.currentUser!.emailVerified;
   }
 
   void signInWithGoogle({required BuildContext context}) async {

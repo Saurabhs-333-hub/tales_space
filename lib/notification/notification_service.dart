@@ -3,7 +3,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 class NotificationService {
-  void initNotifications() async {
+  Future<ReceivedAction?> initNotifications() async {
     await AwesomeNotifications().initialize(
         // set the icon to null if you want to use the default app icon
         'resource://drawable/ic_launcher',
@@ -30,6 +30,7 @@ class NotificationService {
     if (!isAllowed) {
       await AwesomeNotifications().requestPermissionToSendNotifications();
     }
+    return initialAction;
   }
 
   showNotification(RemoteMessage message) async {

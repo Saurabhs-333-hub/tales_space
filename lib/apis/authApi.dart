@@ -49,7 +49,7 @@ class AuthApi implements AuthApiInterface {
       final account = await _account.signInWithEmailAndPassword(
           email: email, password: password);
       User? user = _account.currentUser;
-
+      await user?.sendEmailVerification();
       return right(user);
     } on FirebaseAuthException catch (e, st) {
       return left(Failure(e.message ?? "Something went wrong!", st.toString()));

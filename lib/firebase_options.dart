@@ -41,48 +41,51 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDsRbhYVPWXF4KSRFP_hqjmftbwwYYpNJ0',
-    appId: '1:781363468537:web:3f0b433fa6f5e84ebf2a28',
-    messagingSenderId: '781363468537',
-    projectId: 'tales_space-9bc94',
-    authDomain: 'tales_space-9bc94.firebaseapp.com',
-    storageBucket: 'tales_space-9bc94.appspot.com',
-    measurementId: 'G-H7B2PLQM9P',
+    apiKey: 'AIzaSyB3rXWbtKlbungETlI-9f5O7dQz5EpHpCM',
+    appId: '1:743810771963:web:f7cd8b961cd4a7221b395e',
+    messagingSenderId: '743810771963',
+    projectId: 'tales-space',
+    authDomain: 'tales-space.firebaseapp.com',
+    storageBucket: 'tales-space.firebasestorage.app',
+    measurementId: 'G-TJ9HTD0WV7',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBB9njuebunZkMFKAcoTGjTBJCVhATLtnQ',
-    appId: '1:781363468537:android:cc279ac13cb7971abf2a28',
-    messagingSenderId: '781363468537',
-    projectId: 'tales_space-9bc94',
-    storageBucket: 'tales_space-9bc94.appspot.com',
+    apiKey: 'AIzaSyBy6ecl1LJ4dNb-hKptlUtJTH0NKWQVpoE',
+    appId: '1:743810771963:android:78c93c1bef9f3b4d1b395e',
+    messagingSenderId: '743810771963',
+    projectId: 'tales-space',
+    storageBucket: 'tales-space.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCR5WDP1HCkdoiiAqg3UDMpEfDhh4m4ojo',
-    appId: '1:781363468537:ios:86383d88bcdfa09ebf2a28',
-    messagingSenderId: '781363468537',
-    projectId: 'tales_space-9bc94',
-    storageBucket: 'tales_space-9bc94.appspot.com',
-    iosBundleId: 'com.interesting.tales_space',
+    apiKey: 'AIzaSyCbLYDZVyQC5KMUR7snTt63fmIWhNuYPF4',
+    appId: '1:743810771963:ios:65e0ebe4bbe0c1261b395e',
+    messagingSenderId: '743810771963',
+    projectId: 'tales-space',
+    storageBucket: 'tales-space.firebasestorage.app',
+    iosClientId: '743810771963-1tuen4fjblflhsk0m2a6s9msofkoce82.apps.googleusercontent.com',
+    iosBundleId: 'com.tales.talesSpace',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCR5WDP1HCkdoiiAqg3UDMpEfDhh4m4ojo',
-    appId: '1:781363468537:ios:86383d88bcdfa09ebf2a28',
-    messagingSenderId: '781363468537',
-    projectId: 'tales_space-9bc94',
-    storageBucket: 'tales_space-9bc94.appspot.com',
-    iosBundleId: 'com.interesting.tales_space',
+    apiKey: 'AIzaSyCbLYDZVyQC5KMUR7snTt63fmIWhNuYPF4',
+    appId: '1:743810771963:ios:65e0ebe4bbe0c1261b395e',
+    messagingSenderId: '743810771963',
+    projectId: 'tales-space',
+    storageBucket: 'tales-space.firebasestorage.app',
+    iosClientId: '743810771963-1tuen4fjblflhsk0m2a6s9msofkoce82.apps.googleusercontent.com',
+    iosBundleId: 'com.tales.talesSpace',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDsRbhYVPWXF4KSRFP_hqjmftbwwYYpNJ0',
-    appId: '1:781363468537:web:48e3223fb5d5aee6bf2a28',
-    messagingSenderId: '781363468537',
-    projectId: 'tales_space-9bc94',
-    authDomain: 'tales_space-9bc94.firebaseapp.com',
-    storageBucket: 'tales_space-9bc94.appspot.com',
-    measurementId: 'G-K5FJDWBXLJ',
+    apiKey: 'AIzaSyB3rXWbtKlbungETlI-9f5O7dQz5EpHpCM',
+    appId: '1:743810771963:web:4d7570c0b0980f811b395e',
+    messagingSenderId: '743810771963',
+    projectId: 'tales-space',
+    authDomain: 'tales-space.firebaseapp.com',
+    storageBucket: 'tales-space.firebasestorage.app',
+    measurementId: 'G-LL1NNG5EVS',
   );
+
 }

@@ -291,7 +291,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen>
                 pinned: true,
                 actions: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ref
+                          .read(authControllerProvider.notifier)
+                          .signOut(context);
+                    },
                     icon: const Icon(IconlyLight.setting),
                   )
                 ],
