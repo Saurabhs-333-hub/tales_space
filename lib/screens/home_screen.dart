@@ -42,7 +42,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           colors: [Colors.blue, Colors.pink],
                         ).createShader(bounds),
                     child: FittedBox(
-                        child: const Text('tales_space',
+                        child: const Text('Tales Space',
                             style: TextStyle(fontSize: 30)))),
                 floating: true,
               ),

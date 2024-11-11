@@ -17,34 +17,29 @@ class AuthWrapper extends ConsumerStatefulWidget {
 
 class _AuthWrapperState extends ConsumerState<AuthWrapper> {
   bool isEmailVerified = false;
+  void checkEmailVerification() async {
+    if (!isEmailVerified) {
+      bool isVerified =
+          await ref.read(authControllerProvider.notifier).checkEmailVerified();
+      setState(() {
+        isEmailVerified = isVerified;
+      });
+    }
+  }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     AppLifecycleListener(onResume: () async {
-      bool isVerified =
-          await ref.read(authControllerProvider.notifier).checkEmailVerified();
-      setState(() {
-        isEmailVerified = isVerified;
-      });
+      checkEmailVerification();
     }, onRestart: () async {
-      bool isVerified =
-          await ref.read(authControllerProvider.notifier).checkEmailVerified();
-      setState(() {
-        isEmailVerified = isVerified;
-      });
+      checkEmailVerification();
     }, onInactive: () async {
-      bool isVerified =
-          await ref.read(authControllerProvider.notifier).checkEmailVerified();
-      setState(() {
-        isEmailVerified = isVerified;
-      });
+      checkEmailVerification();
     }, onStateChange: (state) async {
-      bool isVerified =
-          await ref.read(authControllerProvider.notifier).checkEmailVerified();
-      setState(() {
-        isEmailVerified = isVerified;
-      });
+      checkEmailVerification();
+
       log('State changed to $state');
     });
   }
@@ -62,14 +57,14 @@ class _AuthWrapperState extends ConsumerState<AuthWrapper> {
           );
         }
         if (snapshot.hasData) {
-          if (isEmailVerified) {
-            return const MainWrapper();
-          }
-          return const Scaffold(
-            body: Center(
-              child: Text('Please verify your email'),
-            ),
-          );
+          // if (isEmailVerified) {
+          return const MainWrapper();
+          // }
+          // return const Scaffold(
+          //   body: Center(
+          //     child: Text('Please verify your email'),
+          //   ),
+          // );
         }
         return const LoginScreen();
       },

@@ -6,6 +6,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tales_space/controllers/authController.dart';
 import 'package:tales_space/notification/notification_service.dart';
 import 'package:tales_space/routes.dart';
 
@@ -86,9 +87,21 @@ class MyApp extends ConsumerStatefulWidget {
 }
 
 class MyAppState extends ConsumerState<MyApp> {
+  bool isEmailVerified = false;
+  void checkEmailVerification() async {
+    if (!isEmailVerified) {
+      bool isVerified =
+          await ref.read(authControllerProvider.notifier).checkEmailVerified();
+      setState(() {
+        isEmailVerified = isVerified;
+      });
+    }
+  }
+
   @override
   void initState() {
     super.initState();
+    checkEmailVerification();
     // Only after at least the action method is set, the notification events are delivered
     AwesomeNotifications().setListeners(
       onActionReceivedMethod: NotificationController.onActionReceivedMethod,
